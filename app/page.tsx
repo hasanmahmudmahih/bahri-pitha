@@ -2,8 +2,11 @@ import { getPithas } from "./actions/pitha";
 import ProductCard from "./components/ProductCard";
 import { FaFacebookMessenger } from "react-icons/fa";
 
+// Next.js-কে পেজটা ডাইনামিক রাখতে বাধ্য করার কোড
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
-  // ডাটাবেস থেকে রিয়েল ডেটা ফেচ করা হচ্ছে (কোনো ডেমো ডেটা আর নেই)
+  // ডাটাবেস থেকে রিয়েল ডেটা ফেচ করা হচ্ছে (কোনো ডেমো ডেটা আর নেই)
   const pithas = await getPithas();
 
   return (
@@ -13,13 +16,13 @@ export default async function Home() {
           শীতের আমেজে ঐতিহ্যবাহী স্বাদ
         </h2>
         <p className="text-gray-700 max-w-xl mx-auto text-lg">
-          আমাদের প্রতিটি পিঠা তৈরি হয় ঘরোয়া পরিবেশে, খাঁটি উপকরণ ও পরম যত্নে। আপনার পছন্দের পিঠা অর্ডার করুন এখনই!
+          আমাদের প্রতিটি পিঠা তৈরি হয় ঘরোয়া পরিবেশে, খাঁটি উপকরণ ও পরম যত্নে। আপনার পছন্দের পিঠা অর্ডার করুন এখনই!
         </p>
       </section>
 
       <section className="max-w-7xl mx-auto px-4 py-12">
         {pithas.length === 0 ? (
-          <p className="text-center text-gray-500 text-lg">এখনো কোনো পিঠা মেন্যুতে যুক্ত করা হয়নি।</p>
+          <p className="text-center text-gray-500 text-lg">এখনো কোনো পিঠা মেন্যুতে যুক্ত করা হয়নি।</p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {/* ডাটাবেসের পিঠাগুলো ম্যাপ করে কার্ডে পাঠানো হচ্ছে */}
