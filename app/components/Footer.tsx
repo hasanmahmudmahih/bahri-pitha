@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="border-t border-gray-700 w-full max-w-md my-4"></div>
         
         <div className="flex justify-between items-center w-full max-w-md text-xs text-gray-500">
-          <p>© {new Date().getFullYear()} বাহারি পিঠা ঘর. All rights reserved.</p>
+          <p>© 2026 বাহারি পিঠা ঘর. All rights reserved.</p>
           
           {/* এডমিন লগিন পেজে যাওয়ার ছোট্ট সিক্রেট লিংক */}
           <Link href="/admin" className="hover:text-white flex items-center gap-1 transition">
