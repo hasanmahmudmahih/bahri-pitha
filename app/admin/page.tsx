@@ -4,6 +4,8 @@ import Link from "next/link";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
+export const dynamic = "force-dynamic";
+
 export default async function AdminPage() {
   // সিকিউরিটি চেক: কুকি না থাকলে লগিন পেজে পাঠিয়ে দিবে
   const cookieStore = await cookies();
